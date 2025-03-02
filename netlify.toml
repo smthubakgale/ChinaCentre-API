@@ -1,0 +1,15 @@
+[build]
+  functions = "functions"
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  publish = "dist"
+
+[[headers]]
+  for = "/.netlify/functions/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://smthubakgale.github.io"
+    Access-Control-Allow-Methods = "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Max-Age = "3600"
